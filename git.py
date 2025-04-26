@@ -23,4 +23,28 @@ def main(page: ft.Page):
                 ])
             )
         page.update()
+        def add_expense(e):
+        if name_input.value and amount_input.value:
+            expenses.append({"name": name_input.value, "amount": amount_input.value})
+            name_input.value = ""
+            amount_input.value = ""
+            update_expenses()
+    
+    def delete_expense(exp):
+        expenses.remove(exp)
+        update_expenses()
+    
+    name_input = ft.TextField(label="Expense Name", expand=1)
+    amount_input = ft.TextField(label="Amount", expand=1, keyboard_type=ft.KeyboardType.NUMBER)
+    add_button = ft.ElevatedButton("Add", on_click=add_expense)
+    
+    page.add(
+        ft.Column([
+            total_expense,
+            ft.Row([name_input, amount_input, add_button]),
+            expense_list
+        ])
+    )
+
+ft.app(target=main)
     
