@@ -163,6 +163,146 @@ class SpendingApp(ft.Container):
             )
         )
 
+        self.row_3 = ft.Container(
+            height=30,
+            border_radius=10,
+            bgcolor=self.container_color,
+            content=ft.Row(
+                alignment= ft.MainAxisAlignment.SPACE_BETWEEN,
+                controls=[
+                    ft.ElevatedButton("Todos", color=self.container2_color, bgcolor=self.container_color, 
+                                      style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=10), 
+                                                           side=ft.BorderSide(1,self.container2_color)
+                                                          
+                                                          ),
+                      ft.ElevatedButton("Ingresos", color=self.container2_color, bgcolor=self.container_color, 
+                                      style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=10), 
+                                                           side=ft.BorderSide(1,self.container2_color)
+                                                          ),
+                      ft.ElevatedButton("Gastos", color="white", bgcolor=self.container_color, 
+                                      style=ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=10), 
+                                                           side=ft.BorderSide(1,self.container2_color)
+
+                                                          )
+    )
+
+
+           self.row_4 = ft.Container(
+            bgcolor=self.container_color,
+            height=120,padding=5,
+            border_radius=10,   
+            border=ft.border.all(1, self.container2_color),
+            content=ft.Column(
+                spacing=2,
+                controls=[
+                    ft.Row(
+                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                        controls=[
+                            ft.IconButton(icon=ft.icons.DIRECTIONS_CAR_FILLED_OUTLINED, icon_color="white"),
+                            ft.Text("Viajes y Transporte", color=self.container2_color),
+                            ft.IconButton(icon=ft.icons.EDIT_CALENDAR, icon_color="white"),
+                        ]
+                    ),
+                    ft.Column(
+                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                        controls=[
+                            ft.Row([
+                                ft.Text("Vuelo", color=self.container2_color, width=40),
+                                ft.ProgressBar(value=0.7, bgcolor=self.container2_color, border_radius=5, height=5, width=150,
+                                color="white",
+                                ),
+                                ft.Text("70 %", color=self.container2_color),
+                            ]),
+                            ft.Row([
+                                ft.Text("Tren", color=self.container2_color, width=40),
+                                ft.ProgressBar(value=0.85, bgcolor=self.container2_color, border_radius=5, height=5, width=150,
+                                color="white",
+                                ),
+                                ft.Text("85 %", color=self.container2_color),
+                            ]),
+                            ft.Row([
+                                ft.Text("Taxi", color=self.container2_color, width=40),
+                                ft.ProgressBar(value=0.65, bgcolor=self.container2_color, border_radius=5, height=5, width=150,
+                                color="white",
+                                ),
+                                ft.Text("68 %", color=self.container2_color),
+                            ]),
+                           
+                        ]
+                    ),
+                ]
+            )
+        )
+
+          self.row_5 = ft.Container(
+            bgcolor=self.container_color,
+            height=120,padding=5,
+            border_radius=10,   
+            border=ft.border.all(1, self.container2_color),
+            content=ft.Column(
+                spacing=2,
+                controls=[
+                    ft.Row(
+                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                        controls=[
+                            ft.IconButton(icon=ft.icons.HOME_OUTLINED, icon_color="white"),
+                            ft.Text("Casa", color=self.container2_color),
+                            ft.IconButton(icon=ft.icons.EDIT_CALENDAR, icon_color="white"),
+                        ]
+                    ),
+                    ft.Column(
+                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                        controls=[
+                            ft.Row([
+                                ft.Text("Luz", color=self.container2_color, width=60),
+                                ft.ProgressBar(value=0.75, bgcolor=self.container2_color, border_radius=5, height=5, width=150,
+                                color="white",
+                                ),
+                                ft.Text("75 %", color=self.container2_color),
+                            ]),
+                            ft.Row([
+                                ft.Text("Agua", color=self.container2_color, width=60),
+                                ft.ProgressBar(value=0.39, bgcolor=self.container2_color, border_radius=5, height=5, width=150,
+                                color="white",
+                                ),
+                                ft.Text("39 %", color=self.container2_color),
+                            ]),
+                            ft.Row([
+                                ft.Text("Internet", color=self.container2_color, width=60),
+                                ft.ProgressBar(value=0.45, bgcolor=self.container2_color, border_radius=5, height=5, width=150,
+                                color="white",
+                                ),
+                                ft.Text("45 %", color=self.container2_color),
+                            ]),
+                            ]
+                        ),
+                    ]
+                )
+            )        
+                
+          self.row_6 = ft.Container(
+            bgcolor=self.container_color,
+            height=60,padding=10,
+            border_radius=10,
+            content=ft.Row(
+                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                controls=[
+                    ft.Column(
+                        controls=[
+                            ft.Text("Total gastado $7,800", color=self.container2_color, weight="bold",size=15),
+                            ft.ProgressBar(value=0.45, bgcolor=self.container2_color, border_radius=5, height=10, width=150,
+                                color=self.blue_color)
+                        ]
+                    ),
+                    ft.IconButton(icon=ft.icons.POWER_SETTINGS_NEW, bgcolor="transparent",
+                                style = ft.ButtonStyle(side = ft.BorderSide(1, self.container2_color),
+                                        shape=ft.RoundedRectangleBorder(radius=10)                                 
+                                )
+                                ),
+                ]
+            )
+        )
+        
         self.content = ft.Column(
             expand=True,
             scroll="auto",
@@ -170,7 +310,11 @@ class SpendingApp(ft.Container):
                 self.header,
                 self.title,
                 self.row_1,
-                self.row_2
+                self.row_2,
+                self.row_3,
+                self.row_4,
+                self.row_5,
+                self.row_6
             ]
         )
 
