@@ -3,6 +3,8 @@ import json
 import os
 from datetime import datetime
 
+#hola emireth
+
 # Global Variables
 expenses = []
 DATA_FILE = "expenses.json"
