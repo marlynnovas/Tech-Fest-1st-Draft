@@ -4,7 +4,7 @@ class SpendingApp(ft.Container):
     def __init__(self, page: ft.Page):
         super().__init__(expand=True)
         self.page = page
-        self.bg_color = "#88ddfb"
+        self.bg_color = "#000000"
         self.page.bgcolor = self.bg_color
         self.blue_color = "#484a66"
         self.container_color = "#23243d"
