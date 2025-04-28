@@ -4,6 +4,8 @@ import json
 import os
 from collections import defaultdict
 
+#Pechurina con papa
+
 expenses = []
 selected_month = "All"
 months = ["All", "January", "February", "March","April","May","June","July","August","September","October","November","December"]
