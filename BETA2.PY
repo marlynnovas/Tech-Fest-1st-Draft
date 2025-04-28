@@ -13,7 +13,7 @@ class ExpenseApp(ft.container):
                 content=ft.Row(
                     aligment=ft.MainAxisAligment.SPACE_AROUND,
                     controls=[
-                            ft.IconButton(icon=ft.icons.ARROW_BACK_IOS,icon_color= "white"),
+                            ft.IconButton(icon=ft.icons.ArrARROW_BACK_IOS,icon_color= "white"),
                             ft.Dropdown(
                                 width=150,
                                 hint_test="Este mes",
@@ -23,7 +23,7 @@ class ExpenseApp(ft.container):
                                 border_radius=10,
                                 icon_enabled_color="transparent"
                                 ),
-                                Ft.Image(src="assets") 
+                                ft.Image(src="assets") 
                             ]
                     )
             )
