@@ -361,7 +361,8 @@ class SpendingApp(ft.Container):
                 self.row_3,
                 self.row_4,
                 self.row_5,
-                self.row_6
+                self.row_6,
+                self.row_7
             ]
         )
 
