@@ -308,6 +308,48 @@ class SpendingApp(ft.Container):
             )
         )
 
+
+
+        self.row_7 = ft.Container(
+        bgcolor=self.container_color,
+        height=100,
+        padding=10,
+        border_radius=10,
+        content=ft.Column(
+            spacing=5,
+            controls=[
+            ft.Row(
+                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                controls=[
+                    ft.IconButton(icon=ft.icons.SAVINGS_OUTLINED, icon_color="white"),
+                    ft.Text("Meta de Ahorro", color=self.container2_color),
+                    ft.IconButton(icon=ft.icons.EDIT_NOTE, icon_color="white"),
+                ]
+            ),
+            ft.Row(
+                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                controls=[
+                    ft.Column(
+                        alignment=ft.MainAxisAlignment.START,
+                        controls=[
+                            ft.Text("Vacaciones 2025", color="white", size=14, weight="bold"),
+                            ft.Text("$15,000 / $20,000", color=self.container2_color, size=12),
+                        ]
+                    ),
+                    ft.ProgressBar(
+                        value=0.75,
+                        bgcolor=self.container2_color,
+                        border_radius=5,
+                        height=10,
+                        width=150,
+                        color="white"
+                    )
+                ]
+            ),
+        ]
+    )
+)
+
         self.content = ft.Column(
             expand=True,
             scroll="auto",
